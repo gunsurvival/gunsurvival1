@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survival.io - Best Survival Game 2019</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/addons/p5.collide.js"></script>
+</head>
+
+<body oncontextmenu="return false;">
+    <script>
+        var cameras,loaded=false,images={};
+        var users = {},
+    _map,
+    index = -1,
+    ids = [],
+    background_color,
+    weapons,
+    _scale = {},
+    // onHand_i = 0, //index onHand
+    mapWidth,
+    mapHeight, 
+    socket = io();
+    window.onload = () => {
+        loaded=true;
+    }
+    function go(){
+        if (loaded && !$('#one').val() == false) 
+            socket.emit('new connect', $('#one').val());
+    }
+    </script>
+    <!-- <script src="js/camera.js"></script> -->
+    <!-- <script src="js/draw.js"></script> -->
+    <script src="js/game.js"></script>
+    <script src="js/input.js"></script>
+    <!-- <script src="js/socketEvent.js"></script> -->
+    <script src="js/sprite/player/ak47/ak47.js"></script>
+    <script src="js/sprite/player/awm/awm.js"></script>
+    <script src="js/sprite/player/hand/hand.js"></script>
+    <script src="js/sprite/player/weapon.js"></script>
+    <script src="js/sprite/player/player.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
+        <img src="pic/favicon.png" style="width: 70px; "></img>
+    </nav>
+    <input type="submit" id="backtomenu" value="◄ Back To Menu" onclick="socket.emit('public.backtomenu');noLoop();$('#backtomenu').slideUp(); $('#defaultCanvas0').fadeOut(1000,'',()=>$('#menu').fadeIn());" id="backtomenu">
+    <div id="chiso">
+        <div id="ping"></div><br>
+        <div id="fps"></div>
+    </div>
+    <div id="menu">
+        <h1 class="cangiua mt-3 ">GUN SURVIVAL</h1>
+        <div class="container" style="text-align: center;">
+            <div class="row">
+                <div class="col-6 mt-4 center-block "><br><br>
+                    <input class=" mt-2 ml-sm-4 " id="one" type="text" placeholder="Nhập tên nhân vật" />
+                    <button class="btn btn-danger ml-4 nutchoi mt-2 choito gradient-xanh-2" onclick="go()">PLAY SOLO</button>
+                    <button class="btn btn-outline-success nutchoi ml-sm-4 mt-2 gradient-xanh">Play Duo</button>
+                    <button class="btn btn-outline-warning nutchoi mt-2 gradient-xanh">Play Squad</button>
+                    <button class="btn btn-outline-success nutchoi ml-sm-4 mt-2 gradient-xanh">Create Room</button>
+                    <button class="btn btn-outline-warning nutchoi mt-2 gradient-xanh">Join Room</button>
+                    <button class="btn btn-danger ml-4 nutchoi mt-2 choito ">Help</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+
+</html>

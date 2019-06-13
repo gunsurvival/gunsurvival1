@@ -1,0 +1,193 @@
+    .navbar-custom,
+    *,
+    body {
+        background-color: #3e8456 !important;
+    }
+
+    .center-block {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: #3f16ba !important;
+        border-radius: 10px;
+        height: 330px;
+    }
+
+    .cangiua {
+        color: #fff;
+        width: 100vw;
+        text-align: center;
+    }
+
+    /*
+    Định dạng input
+    */
+    #one {
+        background-color: transparent !important;
+        border: 1px solid #000 !important;
+        color: white;
+        border-radius: 10px;
+        padding: 3px;
+        outline: none;
+    }
+
+    .nutchoi {
+        border-radius: 10px;
+        color: white;
+    }
+
+    .nutchoi:hover {
+        color: white;
+
+    }
+
+    .choito {
+        color: white;
+    }
+
+    .choito:hover {
+        color: white;
+        border: none;
+    }
+
+    .gradient-xanh {
+        background: linear-gradient(to right, #00ffff 0%, #3399ff 100%);
+    }
+
+    .gradient-xanh-2 {
+        background: linear-gradient(to bottom right, #43cea2 0%, #185a9d 100%);
+    }
+
+    button {
+        border: none !important;
+        outline: none !important;
+    }
+
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    /* Màng hình laptop hoặc desktop lớn*/
+    @media (min-width: 1200px) {
+        #one {
+            width: 400px !important;
+        }
+
+        .nutchoi {
+            width: 200px !important;
+            font-size: 15px;
+        }
+
+        .choito {
+            width: 400px !important;
+        }
+    }
+
+    /* Màng hình máy tính bảng lớn hoặc máy tính màng hình trung bình */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        #one {
+            width: 370px !important;
+        }
+
+        .nutchoi {
+            width: 185px !important;
+            font-size: 15px;
+        }
+
+        .choito {
+            width: 370px !important;
+        }
+    }
+
+    /* Màng hình máy tính bảng nhỏ hoặc máy tính màng hình nhỏ */
+    @media (min-width: 768px) and (max-width: 991px) {
+        #one {
+            width: 270px !important;
+        }
+
+        .nutchoi {
+            width: 135px !important;
+            font-size: 10px;
+        }
+
+        .choito {
+            width: 270px !important;
+        }
+    }
+
+    /* Màng hình máy tính bảng rất nhỏ hoặc điện thoại di động */
+    @media (max-width: 767px) {
+        #one {
+            width: 190px !important;
+        }
+
+        .nutchoi {
+            width: 95px !important;
+            font-size: 10px;
+        }
+
+        .choito {
+            width: 190px !important;
+        }
+    }
+
+    /* Điện thoại di động hoặc màng hình cực nhỏ */
+    @media (max-width: 480px) {
+        #one {
+            width: 150px !important;
+            margin-left: .5rem;
+        }
+
+        .nutchoi {
+            width: 75px !important;
+            font-size: 10px;
+        }
+
+        .choito {
+            width: 150px !important;
+            margin-left: .5rem;
+        }
+    }
+
+    #defaultCanvas0 {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+
+    #chiso {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        color: white;
+        z-index: 2;
+    }
+
+    #backtomenu {
+        border-color: red;
+        border: normal;
+        border-bottom-right-radius: 10px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 150px;
+        height: 30px;
+        color: #8c0813;
+        font-size: 15px;
+        font-weight: bold;
+        transition: 0.15s;
+        display: none;
+        z-index: 2;
+        /*border: none;*/
+    }
+
+    #backtomenu:hover {
+        color: #ce3744;
+        width: 170px;
+        height: 40px;
+        font-size: 18px;
+    }
