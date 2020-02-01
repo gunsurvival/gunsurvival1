@@ -4,4 +4,5 @@
 <hr>
 <br>
 Game chưa tối ưu, nên hơi lag :(<br>
-Run: Gõ >node server.js và test
+Run: Gõ >node server.js và test<br>
+Link server free: http://gunsurvival.herokuapp.com/
