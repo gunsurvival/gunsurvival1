@@ -9,7 +9,7 @@
   "author": "Khoa Dau",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.0",
+    "express": "^4.17.3",
     "p5": "^0.8.0",
     "package": "^1.0.1",
     "socket.io": "^2.2.0"
